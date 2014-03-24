@@ -12,6 +12,51 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * nslookup www.lth.se
+ * Server: 130.235.63.228
+ * Address:130.235.63.228#53
+ * 130.235.209.220
+ * 
+ * nslookup 130.235.35.100
+ * login.student.lth.se
+ * 
+ * 
+ * traceroute www.colorado.edu
+ * 
+ *1     2 ms     9 ms     9 ms  d001b-gw-190.student.lth.se [130.235.34.2]  <--------- 1 LUND
+  2     6 ms     9 ms     9 ms  c001--d001b.net.lu.se [130.235.217.45]
+  3     9 ms     9 ms     9 ms  x001--c001.net.lu.se [130.235.217.10]
+  
+  4    <1 ms    <1 ms    <1 ms  lu-br1.sunet.se [193.11.20.9]   <--------- 2 SUNET
+  5     9 ms     9 ms     9 ms  m1fre-xe-5-2-0.sunet.se [130.242.85.1]
+  6     9 ms     9 ms     9 ms  t1fre-ae5-v1.sunet.se [130.242.83.46]
+  
+  7     9 ms     9 ms     9 ms  se-fre.nordu.net [109.105.102.9] <--------- 3 NORDU
+  8   115 ms   115 ms   115 ms  us-man.nordu.net [109.105.97.69]
+  
+  9   148 ms   152 ms   155 ms  xe-2-3-0.118.rtr.newy32aoa.net.internet2.edu [109.105.98.10] <--------- 4 INTERNET2
+ 10   152 ms   148 ms   152 ms  et-5-0-0.102.rtr.clev.net.internet2.edu [198.7145.2]
+ 11   152 ms   155 ms   153 ms  et-10-0-0.107.rtr.chic.net.internet2.edu [198.71.45.8]
+ 
+ 12   180 ms   188 ms   187 ms  ae0.3454.core-l3.frgp.net [192.43.217.223]   <--------- 5 FRGP
+ 
+ 13   189 ms   180 ms   189 ms  ucb-re-frgpl3.colorado.edu [198.59.55.1]     <--------- 6 COLORADO
+ 14   193 ms   199 ms   204 ms  ucbcomp-ucbtcom.colorado.edu [128.138.81.253]
+ 15   198 ms   191 ms   189 ms  fw-juniper.colorado.edu [128.138.81.194]
+ 16   198 ms   203 ms   196 ms  hut-fw.colorado.edu [128.138.81.249]
+ 17   190 ms   195 ms   194 ms  comp-hut.colorado.edu [128.138.81.11]
+ 18   196 ms   186 ms   189 ms  www.colorado.edu [128.138.129.98]
+ *
+ *
+ * Visual traceroute:
+ * http://www.yougetsignal.com/tools/visual-tracert/
+ * 
+ * 
+ * 
+ *
+ */
+
 public class Lab1 {
 
 	/** Used to save web page links */
@@ -23,7 +68,7 @@ public class Lab1 {
 		
 		scanAndExtractLinks("http://cs.lth.se/kurs/eda095-naetverksprogrammering/tentamen/");
 		
-		String destFolder = "C:\\Users\\Hani\\Desktop\\pdfs\\";	
+		String destFolder = "\\\\tiger\\dh08hf1\\Windows\\Desktop\\pdfs\\";	
 		
 		for (String s : links) {
 			if (s.contains("pdf")) {
@@ -110,3 +155,4 @@ public class Lab1 {
 	}
 
 }
+
