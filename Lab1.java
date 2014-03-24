@@ -1,3 +1,5 @@
+
+
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
@@ -51,6 +53,35 @@ import java.util.regex.Pattern;
  *
  * Visual traceroute:
  * http://www.yougetsignal.com/tools/visual-tracert/
+ * 
+ * 
+ * netstat -i
+ * Kernel Interface table
+ * Iface   MTU Met   RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
+ * eth0       1500 0  41472688      0      0 0      26400823      0      0      0 BMRU
+ * lo        16436 0     54709      0      0 0         54709      0      0      0 LRU
+ * 
+ * 
+ * Where do all your packets go when they are not destined for the local network?
+ * Gateway
+ * 
+ * What is the localhost address? 
+ * 127.0.0.1
+ * 
+ * 
+ * What are the transport protocols on your machine? List some services, their IP address, and their TCP/UDP ports.
+ * netstat -a
+ * tcp        0      0 panter-7.student.:55096 arn02s06-in-f18.1:https ESTABLISHED
+ * tcp        0      0 panter-7.student.lt:692 tiger.student.lth.s:nfs ESTABLISHED
+ * tcp        0      0 panter-7.student.:60683 david.ddg.lth.se:ldap   ESTABLISHED
+ * tcp        0      0 panter-7.student.:39372 arn02s06-in-f20.1:https ESTABLISHED
+ * tcp        0      0 panter-7.student.lt:820 puma.student.lth.se:nfs ESTABLISHED
+ * tcp        0      0 panter-7.student.:38774 david.ddg.lth.se:ldap   ESTABLISHED
+ * tcp        0      0 panter-7.student.:40651 arn02s06-in-f23.1:https ESTABLISHED
+ * tcp        0      0 panter-7.student.:55643 lb-in-f189.1e100.:https ESTABLISHED
+ * 
+ * 
+ * 
  * 
  * 
  * 
@@ -155,4 +186,3 @@ public class Lab1 {
 	}
 
 }
-
